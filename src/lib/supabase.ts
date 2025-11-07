@@ -3,6 +3,12 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
+console.log('Supabase Configuration Check:', {
+  url: supabaseUrl,
+  keyPresent: !!supabaseAnonKey,
+  keyLength: supabaseAnonKey?.length || 0
+});
+
 if (!supabaseUrl || !supabaseAnonKey || supabaseUrl === '' || supabaseAnonKey === '') {
   console.error('Supabase Configuration Error:', {
     url: supabaseUrl ? 'present' : 'missing',
@@ -13,7 +19,15 @@ if (!supabaseUrl || !supabaseAnonKey || supabaseUrl === '' || supabaseAnonKey ==
   throw new Error('Missing Supabase environment variables. Please check your .env file and restart the dev server.');
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    autoRefreshToken: true,
+    persistSession: true,
+    detectSessionInUrl: true
+  }
+});
+
+console.log('Supabase client initialized successfully');
 
 // Auth helper functions
 export const authHelpers = {

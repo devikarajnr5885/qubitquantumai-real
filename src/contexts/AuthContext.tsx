@@ -31,10 +31,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     // Get initial session
     const getInitialSession = async () => {
+      console.log('AuthContext: Getting initial session...');
       const { data: { session }, error } = await supabase.auth.getSession();
       if (error) {
         console.error('Error getting session:', error);
-        
+
         // Handle invalid refresh token error
         if (error.message && error.message.includes('Refresh Token Not Found')) {
           console.log('Invalid refresh token detected, clearing session...');
@@ -43,6 +44,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
           setUser(null);
         }
       } else {
+        console.log('AuthContext: Session loaded:', session ? 'User logged in' : 'No session');
         setSession(session);
         setUser(session?.user ?? null);
       }
@@ -73,6 +75,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, []);
 
   const signUp = async (email: string, password: string, name?: string) => {
+    console.log('AuthContext: Attempting sign up for:', email);
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
@@ -80,7 +83,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         data: {
           name: name || '',
           display_name: name || ''
-        }
+        },
+        emailRedirectTo: window.location.origin
       }
     });
 
@@ -89,10 +93,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return { error };
     }
 
+    console.log('AuthContext: Sign up successful:', data);
     return { error: null };
   };
 
   const signIn = async (email: string, password: string) => {
+    console.log('AuthContext: Attempting sign in for:', email);
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password
@@ -103,6 +109,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return { error };
     }
 
+    console.log('AuthContext: Sign in successful');
     return { error: null };
   };
 
