@@ -72,7 +72,7 @@ const ChatBot: React.FC = () => {
 
     try {
       const genAI = new GoogleGenerativeAI(apiKey);
-      return genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      return genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     } catch (error) {
       console.error('Error initializing Gemini:', error);
       setApiError('Failed to initialize Gemini AI. Please check your API key.');
