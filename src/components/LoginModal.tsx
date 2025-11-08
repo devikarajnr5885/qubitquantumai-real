@@ -26,37 +26,42 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
 
   // Handle Google Sign In
   const handleGoogleSignIn = async () => {
+    console.log('🔵 Google Sign-In button clicked!');
     setLoading(true);
     setMessage(null);
 
     try {
+      console.log('🔵 Calling signInWithGoogle()...');
       const { error } = await signInWithGoogle();
 
+      console.log('🔵 signInWithGoogle() returned:', { error });
+
       if (error) {
-        console.error('Google sign in error:', error);
+        console.error('🔴 Google sign in error:', error);
+        setLoading(false);
         if (error.message?.includes('OAuth')) {
-          setMessage({ 
-            type: 'error', 
-            text: 'Google sign-in is not properly configured. Please contact support or try email login.' 
+          setMessage({
+            type: 'error',
+            text: 'Google sign-in is not properly configured. Please contact support or try email login.'
           });
         } else {
-          setMessage({ 
-            type: 'error', 
-            text: 'Failed to sign in with Google. Please try again or use email login.' 
+          setMessage({
+            type: 'error',
+            text: 'Failed to sign in with Google. Please try again or use email login.'
           });
         }
+      } else {
+        console.log('✅ Google OAuth redirect should happen now...');
+        // Don't set loading to false - let the redirect happen
       }
-      // Note: If successful, the user will be redirected to Google's OAuth page
-      // and then back to our app, so we don't need to handle success here
     } catch (error: any) {
-      console.error('Google sign in error:', error);
-      setMessage({ 
-        type: 'error', 
-        text: 'An unexpected error occurred with Google sign-in. Please try email login.' 
+      console.error('🔴 Google sign in exception:', error);
+      setLoading(false);
+      setMessage({
+        type: 'error',
+        text: 'An unexpected error occurred with Google sign-in. Please try email login.'
       });
     }
-
-    setLoading(false);
   };
 
   // Cooldown timer for password reset
