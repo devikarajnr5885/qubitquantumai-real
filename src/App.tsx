@@ -61,7 +61,7 @@ function URLHandler() {
 function AppContent() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const { showPopup, closePopup } = useAutoLoginPopup({
-    delayMs: 40000, // Changed from 50000 to 40000 (40 seconds)
+    delayMs: 300000, // 5 minutes
   });
 
   const handleLoginClick = () => {
