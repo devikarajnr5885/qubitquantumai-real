@@ -51,70 +51,48 @@ const Hero: React.FC = () => {
               We integrate AI into your business to streamline every process, eliminate manual work, and create custom solutions that fuel consistent growth
             </p>
 
-            {/* Beautiful Stats Display */}
-            <div className="mb-8 relative">
-              <div className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-md border border-blue-500/30 rounded-2xl shadow-2xl hover:shadow-blue-500/30 hover:scale-105 transition-all duration-500 group">
-                {/* Animated background glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                {/* Stats content */}
-                <div className="relative flex items-center gap-3">
-                  <div className="flex items-center gap-2">
-                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/50 group-hover:rotate-12 transition-transform duration-300">
-                      <Target className="h-5 w-5 text-white" />
-                    </div>
-                    <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                      200+
-                    </span>
-                    <span className="text-sm md:text-base text-gray-300 font-medium">Systems Built</span>
-                  </div>
-
-                  <div className="w-px h-8 bg-gradient-to-b from-transparent via-blue-500/50 to-transparent"></div>
-
-                  <div className="flex items-center gap-2">
-                    <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/50 group-hover:rotate-12 transition-transform duration-300">
-                      <Clock className="h-5 w-5 text-white" />
-                    </div>
-                    <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-                      $2M+
-                    </span>
-                    <span className="text-sm md:text-base text-gray-300 font-medium">in Time Saved</span>
-                  </div>
-                </div>
+            {/* Minimal Stats Display */}
+            <div className="flex items-center gap-6 mb-8">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-bold text-white">200+</span>
+                <span className="text-sm text-gray-400">Systems Built</span>
+              </div>
+              <div className="w-px h-4 bg-gray-700"></div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-bold text-white">$2M+</span>
+                <span className="text-sm text-gray-400">in Time Saved</span>
               </div>
             </div>
 
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <GradientButton variant="autoflow" asChild className="px-8 py-4 text-lg hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300">
+              <GradientButton variant="autoflow" asChild className="px-6 py-3 text-base">
                 <Link to="/build-agent" className="flex items-center space-x-2">
-                  <Settings className="h-5 w-5" />
-                  <span>Build Quantum Agent</span>
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Build Agent</span>
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </GradientButton>
-              
-              <GradientButton variant="autoflow" asChild className="px-8 py-4 text-lg hover:shadow-xl hover:shadow-purple-500/25 transition-all duration-300">
+
+              <GradientButton variant="autoflow" asChild className="px-6 py-3 text-base">
                 <a href="https://calendly.com/qubitquantumai/meeting" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-                  <Calendar className="h-5 w-5" />
-                  <span>Book Free Strategy Call</span>
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Book Strategy Call</span>
+                  <ArrowRight className="h-4 w-4" />
                 </a>
               </GradientButton>
             </div>
 
-            {/* Stats - Compact with hover effects */}
+            {/* Stats - Minimal */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-800/30">
               {[
-                { number: '∞', label: 'Quantum Processing' },
                 { number: '99.9%', label: 'Accuracy' },
-                { number: '24/7', label: 'Active' }
+                { number: '24/7', label: 'Active' },
+                { number: '<1s', label: 'Response' }
               ].map((stat, index) => (
-                <div key={stat.label} className="text-center group hover:scale-110 transition-all duration-300 cursor-pointer">
-                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2 group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-300">
+                <div key={stat.label} className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-gray-400 font-medium text-xs lg:text-sm group-hover:text-blue-400 transition-colors duration-300">{stat.label}</div>
+                  <div className="text-gray-500 text-xs">{stat.label}</div>
                 </div>
               ))}
             </div>
