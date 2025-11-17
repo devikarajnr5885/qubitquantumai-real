@@ -36,11 +36,11 @@ const Hero: React.FC = () => {
             <div className="mb-6">
               <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight mb-4">
                 <span className="bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Your Business, Running on Autopilot
+                  Your Business
                 </span>
                 <br />
                 <span className="text-white">
-                  Organic Tasks
+                  Running on Autopilot
                 </span>
               </h1>
             </div>
