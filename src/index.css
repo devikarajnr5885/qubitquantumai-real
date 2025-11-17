@@ -229,36 +229,36 @@ canvas {
     --border-color-2: hsla(320, 50%, 90%, 0.75);
   }
 
-  /* Quantum AI Primary Theme - Blue to Purple */
+  /* Quantum AI Primary Theme - Pink to Orange Gradient */
   .gradient-button-autoflow {
-    --color-1: #000000;
-    --color-2: #1e1b4b;
-    --color-3: #3730a3;
-    --color-4: #7c3aed;
-    --color-5: #a855f7;
-    --border-angle: 135deg;
-    --border-color-1: hsla(240, 75%, 60%, 0.3);
-    --border-color-2: hsla(270, 75%, 60%, 0.8);
+    --color-1: #000;
+    --color-2: #08012c;
+    --color-3: #4e1e40;
+    --color-4: #70464e;
+    --color-5: #88394c;
+    --border-angle: 20deg;
+    --border-color-1: hsla(340, 75%, 60%, 0.2);
+    --border-color-2: hsla(340, 75%, 40%, 0.75);
   }
 
   .gradient-button-autoflow:hover {
     --pos-x: 0%;
-    --pos-y: 90%;
-    --spread-x: 130%;
-    --spread-y: 120%;
-    --color-1: #3b82f6;
-    --color-2: #6366f1;
-    --color-3: #8b5cf6;
-    --color-4: #a855f7;
-    --color-5: #000000;
+    --pos-y: 91.51%;
+    --spread-x: 120.24%;
+    --spread-y: 103.18%;
+    --color-1: #c96287;
+    --color-2: #c66c64;
+    --color-3: #cc7d23;
+    --color-4: #37140a;
+    --color-5: #000;
+    --border-angle: 190deg;
+    --border-color-1: hsla(340, 78%, 90%, 0.1);
+    --border-color-2: hsla(340, 75%, 90%, 0.6);
     --stop-1: 0%;
-    --stop-2: 15%;
-    --stop-3: 40%;
-    --stop-4: 75%;
-    --stop-5: 100%;
-    --border-angle: 225deg;
-    --border-color-1: hsla(240, 75%, 80%, 0.4);
-    --border-color-2: hsla(270, 75%, 80%, 0.9);
+    --stop-2: 8.8%;
+    --stop-3: 21.44%;
+    --stop-4: 71.34%;
+    --stop-5: 85.76%;
   }
 
   /* Quantum AI Secondary Theme - Darker with accent */
@@ -315,10 +315,10 @@ canvas {
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 20px rgba(201, 98, 135, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 30px rgba(201, 98, 135, 0.6);
   }
 }
 
@@ -344,10 +344,10 @@ canvas {
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 20px rgba(201, 98, 135, 0.4);
   }
   50% {
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.8);
+    box-shadow: 0 0 40px rgba(201, 98, 135, 0.8);
   }
 }
 
@@ -387,12 +387,12 @@ canvas {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  background: linear-gradient(to bottom, #c96287, #cc7d23);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #2563eb, #7c3aed);
+  background: linear-gradient(to bottom, #e76b98, #e89645);
 }
 
 /* Smooth transitions for all interactive elements */
@@ -407,14 +407,14 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 a:focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #c96287;
   outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 4px rgba(201, 98, 135, 0.1);
 }
 
 /* Enhanced selection styles */
 ::selection {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(90deg, #c96287, #cc7d23);
   color: white;
 }
 
@@ -427,7 +427,7 @@ a:focus-visible {
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  background: linear-gradient(90deg, #c96287, #cc7d23, #e89645);
   background-size: 200% 100%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -437,14 +437,14 @@ a:focus-visible {
 
 /* Enhanced button styles */
 .btn-primary {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, #c96287, #cc7d23);
+  box-shadow: 0 4px 15px rgba(201, 98, 135, 0.3);
   transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 8px 25px rgba(204, 125, 35, 0.4);
 }
 
 /* Card hover effects */
@@ -459,8 +459,8 @@ a:focus-visible {
 
 /* Enhanced hover effects for boxes */
 .hover-glow:hover {
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
-  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 30px rgba(201, 98, 135, 0.3);
+  border-color: rgba(201, 98, 135, 0.5);
 }
 
 .hover-lift:hover {
