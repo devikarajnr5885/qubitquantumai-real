@@ -178,7 +178,7 @@ const ContactPage: React.FC = () => {
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
             {isQuantumResearch 
               ? 'Ready to advance the frontiers of quantum science? Join our research team and contribute to groundbreaking discoveries in quantum computing, AI, and physics.'
-              : 'Ready to transform your business with Quantum AI? Let\'s discuss how Qubit Quantum AI team from Kerala, India can help you achieve your automation and AI goals globally.'
+              : 'Ready to transform your business with Quantum AI? Let\'s discuss how Qubit Quantum AI team from India can help you achieve your automation and AI goals globally.'
             }
           </p>
           
@@ -231,7 +231,7 @@ const ContactPage: React.FC = () => {
                 <p className="text-gray-400 text-lg leading-relaxed mb-8">
                   {isQuantumResearch 
                     ? 'We\'re looking forward to expanding our research on quantum physics and AI. If you\'re passionate about advancing the frontiers of science and want to join our team to study and research in these cutting-edge fields, we\'d love to hear from you.'
-                    : 'Hi, we\'re Qubit Quantum AI, experts in automation and web tools based in Kerala, India. We specialize in creating quantum-powered AI solutions that streamline business processes and drive growth globally. Whether you need chatbots, virtual assistants, or custom automation tools, we\'re here to help.'
+                    : 'Hi, we\'re Qubit Quantum AI, experts in automation and web tools based in India. We specialize in creating quantum-powered AI solutions that streamline business processes and drive growth globally. Whether you need chatbots, virtual assistants, or custom automation tools, we\'re here to help.'
                   }
                 </p>
               </div>

@@ -32,21 +32,21 @@ const Hero: React.FC = () => {
               <Star className="h-4 w-4 text-purple-400 animate-pulse delay-500" />
             </div>
 
-            {/* Main heading - Reduced font sizes */}
-            <div className="mb-8">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight mb-6">
+            {/* Main heading - Normal sizes */}
+            <div className="mb-6">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight mb-4">
                 <span className="bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Quantum AI Workforces
+                  Stop Wasting Time on
                 </span>
                 <br />
                 <span className="text-white">
-                  Beyond Limits
+                  Organic Tasks
                 </span>
               </h1>
             </div>
 
-            {/* Simplified subtitle - Reduced font size */}
-            <p className="text-gray-400 text-base lg:text-lg xl:text-xl leading-relaxed mb-8 max-w-2xl">
+            {/* Simplified subtitle - Normal size */}
+            <p className="text-gray-400 text-sm lg:text-base xl:text-lg leading-relaxed mb-6 max-w-2xl">
               Quantum-powered AI agents that work 24/7 to capture leads, close deals, and multiply your revenue
             </p>
 

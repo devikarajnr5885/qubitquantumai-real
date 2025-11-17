@@ -5,7 +5,7 @@ import { GradientButton } from './ui/gradient-button';
 
 const About: React.FC = () => {
   const stats = [
-    { icon: Users, value: '50+', label: 'Projects Completed' },
+    { icon: Users, value: '200+', label: 'Projects Completed' },
     { icon: Award, value: '30+', label: 'Happy Clients' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI Increase' },
     { icon: Target, value: '99.9%', label: 'Client Satisfaction' }
@@ -60,23 +60,23 @@ const About: React.FC = () => {
           {/* Left side - Hook Content with reduced text sizes */}
           <div className="space-y-8 max-w-4xl">
             <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 leading-tight">
                 <span className="text-white">Stop Wasting Time on </span>
-                <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-                  Repetitive Tasks
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Organic Tasks
                 </span>
               </h2>
-              <p className="text-lg lg:text-xl xl:text-2xl text-gray-400 leading-relaxed mb-8">
+              <p className="text-base lg:text-lg xl:text-xl text-gray-400 leading-relaxed mb-6">
                 What if you could automate 80% of your daily tasks and focus only on growing your business? 
                 Our quantum-inspired AI solutions make this reality for businesses just like yours.
               </p>
               
               <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-3xl p-6 mb-8 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
-                <h3 className="text-lg lg:text-xl font-semibold text-white mb-4 flex items-center">
-                  <CheckCircle className="h-6 w-6 text-green-400 mr-3" />
+                <h3 className="text-base lg:text-lg font-semibold text-white mb-3 flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-400 mr-2" />
                   The Problem You're Facing Right Now:
                 </h3>
-                <ul className="space-y-3 text-gray-300 text-base lg:text-lg">
+                <ul className="space-y-2 text-gray-300 text-sm lg:text-base">
                   <li className="flex items-start hover:text-white transition-colors duration-300">
                     <span className="text-red-400 mr-3 text-lg">•</span>
                     Spending hours on manual data entry and repetitive tasks
@@ -98,7 +98,7 @@ const About: React.FC = () => {
             </div>
 
             <div className="space-y-8">
-              <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white">
+              <h3 className="text-xl lg:text-2xl xl:text-3xl font-bold text-white">
                 <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
                   Here's How Qubit Quantum AI Solves It:
                 </span>
@@ -121,8 +121,8 @@ const About: React.FC = () => {
 
               {/* CTA Section */}
               <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-3xl p-6 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-4">Ready to Transform Your Business with Quantum AI?</h3>
-                <p className="text-gray-300 mb-6 text-base lg:text-lg">
+                <h3 className="text-lg font-semibold text-white mb-3">Ready to Transform Your Business with Quantum AI?</h3>
+                <p className="text-gray-300 mb-4 text-sm lg:text-base">
                   Join 30+ successful businesses that have already automated their operations with Qubit Quantum AI and 
                   increased their revenue by an average of 300%.
                 </p>
@@ -150,7 +150,7 @@ const About: React.FC = () => {
             <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl p-8 xl:p-10 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500">
               {/* Benefits Grid */}
               <div className="space-y-6 mb-10">
-                <h3 className="text-xl lg:text-2xl xl:text-3xl font-bold text-white text-center mb-6">
+                <h3 className="text-lg lg:text-xl xl:text-2xl font-bold text-white text-center mb-4">
                   What You'll Achieve with Qubit Quantum AI:
                 </h3>
                 {benefits.map((benefit, index) => (
@@ -163,8 +163,8 @@ const About: React.FC = () => {
                         <benefit.icon className="h-6 w-6 text-white" />
                       </div>
                       <div className="flex-1">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <h4 className="font-semibold text-white text-base lg:text-lg group-hover:text-blue-400 transition-colors duration-300">{benefit.title}</h4>
+                        <div className="flex items-center space-x-2 mb-1">
+                          <h4 className="font-semibold text-white text-sm lg:text-base group-hover:text-blue-400 transition-colors duration-300">{benefit.title}</h4>
                           <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent font-bold text-sm">
                             {benefit.highlight}
                           </span>

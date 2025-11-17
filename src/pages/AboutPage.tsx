@@ -3,7 +3,7 @@ import { Target, Users, Award, TrendingUp, Code, Zap, Brain, Shield, ArrowRight,
 
 const AboutPage: React.FC = () => {
   const stats = [
-    { icon: Users, value: '50+', label: 'Projects Completed' },
+    { icon: Users, value: '200+', label: 'Projects Completed' },
     { icon: Award, value: '30+', label: 'Happy Clients' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI Increase' },
     { icon: Target, value: '99.9%', label: 'Client Satisfaction' }

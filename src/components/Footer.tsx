@@ -49,8 +49,8 @@ const Footer: React.FC = () => {
             </div>
             
             <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
-              Leading quantum AI automation agency from Kerala, India, specializing in intelligent business solutions. 
-              We transform operations through advanced AI agents, chatbots, and custom automation systems 
+              Leading quantum AI automation agency from India, specializing in intelligent business solutions.
+              We transform operations through advanced AI agents, chatbots, and custom automation systems
               that work 24/7 to grow your business globally.
             </p>
             
