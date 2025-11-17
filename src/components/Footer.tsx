@@ -135,23 +135,20 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Phone</p>
-                  <div>
-                    <a href="tel:+919495516362" className="hover:text-blue-400 transition-colors duration-300">+91 9495516362</a>
-                    <p className="text-xs text-gray-500 mt-1">Mon-Sun 9AM-9PM IST</p>
-                  </div>
+                  <a href="https://calendly.com/qubitquantumai/meeting" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors duration-300">+91 9495516362</a>
                 </div>
               </li>
               <li className="flex items-start space-x-3 text-gray-400 group">
-                <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center mt-0.5 group-hover:bg-green-500/30 transition-colors duration-300">
-                  <MessageCircle className="h-4 w-4 text-green-400" />
+                <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mt-0.5 group-hover:bg-purple-500/30 transition-colors duration-300">
+                  <MessageCircle className="h-4 w-4 text-purple-400" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">WhatsApp</p>
-                  <a 
-                    href="https://wa.me/919495516362?text=Hey%20Qubit%20Quantum%20AI%2C%20I%20need%20help%20with%20AI%20automation%20solutions.%20Can%20you%20assist%20me%3F" 
-                    target="_blank" 
+                  <a
+                    href="https://wa.me/919495516362?text=Hey%20Qubit%20Quantum%20AI%2C%20I%20need%20help%20with%20AI%20automation%20solutions.%20Can%20you%20assist%20me%3F"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-green-400 transition-colors duration-300"
+                    className="hover:text-purple-400 transition-colors duration-300"
                   >
                     +91 94955 16362
                   </a>

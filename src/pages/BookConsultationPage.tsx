@@ -19,7 +19,7 @@ const BookConsultationPage: React.FC = () => {
           if (prev <= 1) {
             clearInterval(countdownInterval);
             // Auto redirect after countdown
-            window.open('https://calendly.com/autoflowai525/30min', '_blank');
+            window.open('https://calendly.com/qubitquantumai/meeting', '_blank');
             return 0;
           }
           return prev - 1;
@@ -45,7 +45,7 @@ const BookConsultationPage: React.FC = () => {
   ];
 
   const handleBookNow = () => {
-    window.open('https://calendly.com/autoflowai525/30min', '_blank');
+    window.open('https://calendly.com/qubitquantumai/meeting', '_blank');
   };
 
   const handleGoBack = () => {

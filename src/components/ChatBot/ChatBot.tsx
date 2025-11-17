@@ -106,7 +106,7 @@ COMPANY INFO:
 - Services: AI Chatbots, Process Automation, Lead Generation, Virtual Assistants, Custom AI Solutions
 - Quick delivery: Standard (1 week), Express (1-2 days)
 - 100% money-back guarantee, 6 months free maintenance
-- Consultation link: https://calendly.com/autoflowai525/30min
+- Consultation link: https://calendly.com/qubitquantumai/meeting
 - WhatsApp: +91 94955 16362
 - Email: qubitquantumai@gmail.com
 
@@ -160,13 +160,13 @@ Respond naturally and conversationally as the Qubit Quantum AI assistant. Keep i
       
       // Handle specific error types with conversational fallbacks
       if (error?.message?.includes('API_KEY_INVALID')) {
-        return "I'm having some technical difficulties right now. 😅 But no worries! You can book a consultation directly here: https://calendly.com/autoflowai525/30min or message us on WhatsApp: +91 94955 16362";
+        return "I'm having some technical difficulties right now. 😅 But no worries! You can book a consultation directly here: https://calendly.com/qubitquantumai/meeting or message us on WhatsApp: +91 94955 16362";
       } else if (error?.message?.includes('QUOTA_EXCEEDED')) {
-        return "I'm getting a lot of questions today! 😊 While I sort this out, feel free to book a consultation directly: https://calendly.com/autoflowai525/30min or WhatsApp us: +91 94955 16362";
+        return "I'm getting a lot of questions today! 😊 While I sort this out, feel free to book a consultation directly: https://calendly.com/qubitquantumai/meeting or WhatsApp us: +91 94955 16362";
       } else if (error?.message?.includes('RATE_LIMIT_EXCEEDED')) {
-        return "Give me just a moment to catch up! In the meantime, you can book a consultation here: https://calendly.com/autoflowai525/30min or WhatsApp: +91 94955 16362";
+        return "Give me just a moment to catch up! In the meantime, you can book a consultation here: https://calendly.com/qubitquantumai/meeting or WhatsApp: +91 94955 16362";
       } else {
-        return "I apologize for the technical hiccup! 🤖 Let's connect directly - book a consultation here: https://calendly.com/autoflowai525/30min or WhatsApp: +91 94955 16362";
+        return "I apologize for the technical hiccup! 🤖 Let's connect directly - book a consultation here: https://calendly.com/qubitquantumai/meeting or WhatsApp: +91 94955 16362";
       }
     }
   };
@@ -261,7 +261,7 @@ Respond naturally and conversationally as the Qubit Quantum AI assistant. Keep i
       
       const errorMsg: Message = {
         id: (Date.now() + 1).toString(),
-        text: "I'm having a small technical issue! 😅 But I'm here to help - you can book a consultation directly: https://calendly.com/autoflowai525/30min or WhatsApp us: +91 94955 16362",
+        text: "I'm having a small technical issue! 😅 But I'm here to help - you can book a consultation directly: https://calendly.com/qubitquantumai/meeting or WhatsApp us: +91 94955 16362",
         isUser: false,
         timestamp: new Date()
       };
@@ -315,7 +315,7 @@ Respond naturally and conversationally as the Qubit Quantum AI assistant. Keep i
 
   const handleQuickAction = async (action: string) => {
     if (action === "Book consultation") {
-      window.open('https://calendly.com/autoflowai525/30min', '_blank');
+      window.open('https://calendly.com/qubitquantumai/meeting', '_blank');
       
       // Save the action to database
       try {
@@ -418,7 +418,7 @@ Respond naturally and conversationally as the Qubit Quantum AI assistant. Keep i
                       <div className="mt-2 flex flex-wrap gap-2">
                         {message.text.includes('calendly.com') && (
                           <button
-                            onClick={() => window.open('https://calendly.com/autoflowai525/30min', '_blank')}
+                            onClick={() => window.open('https://calendly.com/qubitquantumai/meeting', '_blank')}
                             className="inline-flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-3 py-1 rounded-lg text-xs transition-colors duration-300"
                           >
                             <Calendar className="h-3 w-3" />

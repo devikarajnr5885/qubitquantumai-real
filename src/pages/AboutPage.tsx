@@ -57,11 +57,11 @@ const AboutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              About AutoFlow AI
+              About Qubit Quantum AI
             </span>
           </h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
-            Discover the story behind AutoFlow AI and how we're revolutionizing business automation 
+            Discover the story behind Qubit Quantum AI and how we're revolutionizing business automation 
             with cutting-edge AI solutions that deliver real results.
           </p>
         </div>
@@ -86,14 +86,14 @@ const AboutPage: React.FC = () => {
                   Founded by <span className="text-blue-400">Devika Raj NR</span>
                 </h3>
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  AutoFlow AI was born from a vision to make advanced automation and AI technology 
+                  Qubit Quantum AI was born from a vision to make advanced automation and AI technology 
                   accessible to businesses of all sizes. With expertise in automation systems, 
                   Devika recognized that many businesses were struggling to implement effective automation 
                   solutions due to complexity and cost barriers.
                 </p>
                 
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  AutoFlow AI bridges this gap by providing custom, user-friendly automation and AI 
+                  Qubit Quantum AI bridges this gap by providing custom, user-friendly automation and AI 
                   solutions that deliver immediate value while scaling with your business.
                 </p>
 
@@ -170,11 +170,11 @@ const AboutPage: React.FC = () => {
                   {guarantees.map((guarantee, index) => (
                     <div key={guarantee.title} className="bg-gray-700/50 rounded-xl p-4">
                       <div className="flex items-start space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-green-600 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                           <guarantee.icon className="h-4 w-4 text-white" />
                         </div>
                         <div>
-                          <h5 className="font-semibold text-green-400 text-sm">{guarantee.title}</h5>
+                          <h5 className="font-semibold text-blue-400 text-sm">{guarantee.title}</h5>
                           <p className="text-xs text-gray-400">{guarantee.desc}</p>
                         </div>
                       </div>
@@ -223,7 +223,7 @@ const AboutPage: React.FC = () => {
                 
                 <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-6 mb-6">
                   <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-400 mr-2" />
+                    <CheckCircle className="h-5 w-5 text-blue-400 mr-2" />
                     The Problem You're Facing Right Now:
                   </h3>
                   <ul className="space-y-2 text-gray-300">
@@ -249,7 +249,7 @@ const AboutPage: React.FC = () => {
 
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-white">
-                  <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                     Here's How We Solve It:
                   </span>
                 </h3>
@@ -270,19 +270,19 @@ const AboutPage: React.FC = () => {
                 </div>
 
                 {/* Guarantees Section */}
-                <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-2xl p-6">
+                <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-6">
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-                    <Shield className="h-5 w-5 text-green-400 mr-2" />
+                    <Shield className="h-5 w-5 text-blue-400 mr-2" />
                     Our Guarantees to You:
                   </h3>
                   <div className="space-y-3">
                     {guarantees.map((guarantee, index) => (
                       <div key={guarantee.title} className="flex items-start space-x-3">
-                        <div className="w-6 h-6 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <guarantee.icon className="h-3 w-3 text-green-400" />
+                        <div className="w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <guarantee.icon className="h-3 w-3 text-blue-400" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-green-400 text-sm">{guarantee.title}</h4>
+                          <h4 className="font-semibold text-blue-400 text-sm">{guarantee.title}</h4>
                           <p className="text-xs text-gray-400">{guarantee.desc}</p>
                         </div>
                       </div>
@@ -334,7 +334,7 @@ const AboutPage: React.FC = () => {
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-1">
                             <h4 className="font-semibold text-white text-sm">{benefit.title}</h4>
-                            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent font-bold text-xs">
+                            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-bold text-xs">
                 
                               {benefit.highlight}
                             </span>
@@ -374,11 +374,11 @@ const AboutPage: React.FC = () => {
                   </p>
                   <div className="flex items-center justify-center space-x-4 text-xs">
                     <div className="flex items-center space-x-1">
-                      <CheckCircle className="h-3 w-3 text-green-400" />
+                      <CheckCircle className="h-3 w-3 text-blue-400" />
                       <span className="text-gray-400">Free Setup</span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      <CheckCircle className="h-3 w-3 text-green-400" />
+                      <CheckCircle className="h-3 w-3 text-blue-400" />
                       <span className="text-gray-400">30-Day Guarantee</span>
                     </div>
                   </div>
@@ -396,7 +396,7 @@ const AboutPage: React.FC = () => {
             Ready to Start Your AI Journey?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
-            Let's discuss how AutoFlow AI can transform your business with intelligent automation solutions.
+            Let's discuss how Qubit Quantum AI can transform your business with intelligent automation solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

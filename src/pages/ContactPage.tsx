@@ -45,7 +45,7 @@ const ContactPage: React.FC = () => {
   ];
 
   const handleBookConsultation = () => {
-    window.open('https://calendly.com/autoflowai525/30min', '_blank');
+    window.open('https://calendly.com/qubitquantumai/meeting', '_blank');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
