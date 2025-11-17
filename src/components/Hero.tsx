@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Zap, Brain, Rocket, Sparkles, Star, Users, Award, TrendingUp, Clock, Target, Settings } from 'lucide-react';
+import { ArrowRight, Zap, Brain, Rocket, Sparkles, Star, Users, Award, TrendingUp, Clock, Target, Settings, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { GradientButton } from './ui/gradient-button';
 import { SplineScene } from './ui/spline-scene';
@@ -32,13 +32,14 @@ const Hero: React.FC = () => {
               <Star className="h-4 w-4 text-purple-400 animate-pulse delay-500" />
             </div>
 
-            {/* Main heading - Normal sizes */}
+            {/* Main heading - Increased spacing */}
             <div className="mb-6">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight mb-4">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight">
                 <span className="bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Your Business
                 </span>
                 <br />
+                <div className="mt-6"></div>
                 <span className="text-white">
                   Running on Autopilot
                 </span>
@@ -50,23 +51,37 @@ const Hero: React.FC = () => {
               We integrate AI into your business to streamline every process, eliminate manual work, and create custom solutions that fuel consistent growth
             </p>
 
-            {/* Feature highlights - Updated with new messaging */}
-            <div className="flex flex-wrap gap-4 mb-8">
-              {[
-                { icon: Brain, text: 'Quantum Smart AI' },
-                { icon: Zap, text: '24/7 Active' },
-                { icon: Rocket, text: 'Infinite Scale' }
-              ].map(({ icon: Icon, text }, index) => (
-                <div
-                  key={text}
-                  className="group flex items-center space-x-3 bg-gray-900/30 backdrop-blur-sm border border-gray-700/50 rounded-xl px-4 py-2 transform hover:scale-105 transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 hover:bg-gray-800/50"
-                >
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/30">
-                    <Icon className="h-4 w-4 text-white" />
+            {/* Beautiful Stats Display */}
+            <div className="mb-8 relative">
+              <div className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-md border border-blue-500/30 rounded-2xl shadow-2xl hover:shadow-blue-500/30 hover:scale-105 transition-all duration-500 group">
+                {/* Animated background glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                {/* Stats content */}
+                <div className="relative flex items-center gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/50 group-hover:rotate-12 transition-transform duration-300">
+                      <Target className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      200+
+                    </span>
+                    <span className="text-sm md:text-base text-gray-300 font-medium">Systems Built</span>
                   </div>
-                  <span className="text-gray-300 font-medium text-sm group-hover:text-white transition-colors duration-300">{text}</span>
+
+                  <div className="w-px h-8 bg-gradient-to-b from-transparent via-blue-500/50 to-transparent"></div>
+
+                  <div className="flex items-center gap-2">
+                    <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/50 group-hover:rotate-12 transition-transform duration-300">
+                      <Clock className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                      $2M+
+                    </span>
+                    <span className="text-sm md:text-base text-gray-300 font-medium">in Time Saved</span>
+                  </div>
                 </div>
-              ))}
+              </div>
             </div>
 
             {/* CTA buttons */}
@@ -79,11 +94,12 @@ const Hero: React.FC = () => {
                 </Link>
               </GradientButton>
               
-              <GradientButton variant="secondary" asChild className="px-8 py-4 text-lg hover:shadow-lg hover:shadow-gray-500/20 transition-all duration-300">
-                <Link to="/services" className="flex items-center space-x-2">
-                  <span>View Solutions</span>
-                  <div className="w-1.5 h-1.5 bg-blue-400 rounded-full group-hover:animate-pulse"></div>
-                </Link>
+              <GradientButton variant="autoflow" asChild className="px-8 py-4 text-lg hover:shadow-xl hover:shadow-purple-500/25 transition-all duration-300">
+                <a href="https://calendly.com/qubitquantumai/meeting" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+                  <Calendar className="h-5 w-5" />
+                  <span>Book Free Strategy Call</span>
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </a>
               </GradientButton>
             </div>
 
