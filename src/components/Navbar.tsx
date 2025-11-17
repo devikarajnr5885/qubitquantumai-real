@@ -49,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLoginClick }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Enhanced Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center space-x-3 group">
             <div className="relative">
               {/* Quantum-inspired logo for Qubit Quantum AI */}
               <div className="relative w-10 h-10 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-xl transform group-hover:rotate-12 transition-all duration-300 shadow-lg hover:shadow-blue-500/25">
@@ -93,9 +93,10 @@ const Navbar: React.FC<NavbarProps> = ({ onLoginClick }) => {
               <Link
                 key={item.name}
                 to={item.path}
+                onClick={() => window.scrollTo(0, 0)}
                 className={`relative transition-all duration-300 group ${
-                  isActivePath(item.path) 
-                    ? 'text-blue-400' 
+                  isActivePath(item.path)
+                    ? 'text-blue-400'
                     : 'text-gray-300 hover:text-blue-400'
                 }`}
               >
@@ -103,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLoginClick }) => {
                 <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300 ${
                   isActivePath(item.path) ? 'w-full' : 'w-0 group-hover:w-full'
                 }`}></div>
-                
+
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 bg-blue-400/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-2"></div>
               </Link>
@@ -111,7 +112,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLoginClick }) => {
             
             {/* Quantum Research Lab Button */}
             <GradientButton variant="secondary" asChild className="hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
-              <Link to="/quantum-research-lab" className="flex items-center space-x-2">
+              <Link to="/quantum-research-lab" onClick={() => window.scrollTo(0, 0)} className="flex items-center space-x-2">
                 <Atom className="h-4 w-4" />
                 <span>Quantum Research Lab</span>
               </Link>
@@ -173,11 +174,14 @@ const Navbar: React.FC<NavbarProps> = ({ onLoginClick }) => {
                   key={item.name}
                   to={item.path}
                   className={`block px-3 py-2 rounded-lg transition-all duration-300 ${
-                    isActivePath(item.path) 
-                      ? 'text-blue-400 bg-blue-500/10' 
+                    isActivePath(item.path)
+                      ? 'text-blue-400 bg-blue-500/10'
                       : 'text-gray-300 hover:text-blue-400 hover:bg-gray-800/50'
                   }`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   {item.name}
                 </Link>
@@ -187,7 +191,10 @@ const Navbar: React.FC<NavbarProps> = ({ onLoginClick }) => {
               <Link
                 to="/quantum-research-lab"
                 className="block px-3 py-2 rounded-lg transition-all duration-300 text-gray-300 hover:text-blue-400 hover:bg-gray-800/50"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  window.scrollTo(0, 0);
+                }}
               >
                 <div className="flex items-center space-x-2">
                   <Atom className="h-4 w-4" />
