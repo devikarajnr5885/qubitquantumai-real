@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
 
             {/* Simplified subtitle - Normal size */}
             <p className="text-gray-400 text-sm lg:text-base xl:text-lg leading-relaxed mb-6 max-w-2xl">
-              Quantum-powered AI agents that work 24/7 to capture leads, close deals, and multiply your revenue
+              Stop doing. Start growing. We build AI systems that handle everything from customer conversations to data entry to follow-ups—while you focus on what actually makes money.
             </p>
 
             {/* Feature highlights - Updated with new messaging */}
