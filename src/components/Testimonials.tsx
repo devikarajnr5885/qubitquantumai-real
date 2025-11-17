@@ -8,7 +8,7 @@ const Testimonials: React.FC = () => {
       name: 'Sarah Johnson',
       image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150',
       rating: 5,
-      text: 'AutoFlow transformed our customer service with their AI chatbot. We saw a 300% increase in customer satisfaction and 50% reduction in support costs. The automation works flawlessly!',
+      text: 'Quantum AI transformed our customer service with their AI chatbot. We saw a 300% increase in customer satisfaction and 50% reduction in support costs. The automation works flawlessly!',
       project: 'AI Chatbot Implementation'
     },
     {
