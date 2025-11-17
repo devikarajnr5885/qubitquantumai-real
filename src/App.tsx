@@ -9,6 +9,7 @@ import AutoLoginPopup from './components/AutoLoginPopup';
 import PasswordReset from './components/PasswordReset';
 import ChatBot from './components/ChatBot/ChatBot';
 import ChatAnalytics from './components/ChatAnalytics/ChatAnalytics';
+import NeuralNetwork from './components/NeuralNetwork';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
@@ -80,48 +81,54 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <URLHandler />
-      <Routes>
-        <Route path="/reset-password" element={<PasswordReset />} />
-        <Route path="/book-consultation" element={<BookConsultationPage />} />
-        <Route path="/build-agent" element={<BuildAgentPage />} />
-        <Route path="/quantum-research-lab" element={<QuantumResearchLabPage />} />
-        <Route path="/quantum-collaboration" element={<QuantumCollaborationPage />} />
-        <Route path="/chat-analytics" element={<ChatAnalytics />} />
-        <Route path="/*" element={
-          <>
-            <Navbar onLoginClick={handleLoginClick} />
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/portfolio" element={<PortfolioPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-              <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-              <Route path="/cookie-policy" element={<CookiePolicyPage />} />
-            </Routes>
-            <Footer />
-            
-            {/* Auto Login Popup */}
-            <AutoLoginPopup 
-              isVisible={showPopup}
-              onClose={closePopup}
-              onLoginClick={handleLoginClick}
-            />
-            
-            {/* Manual Login Modal */}
-            <LoginModal 
-              isOpen={isLoginModalOpen} 
-              onClose={() => setIsLoginModalOpen(false)} 
-            />
+    <div className="min-h-screen bg-black text-white relative">
+      {/* Neural Network Background */}
+      <NeuralNetwork />
 
-            {/* AI ChatBot */}
-            <ChatBot />
-          </>
-        } />
-      </Routes>
+      {/* Main Content */}
+      <div className="relative" style={{ zIndex: 10 }}>
+        <URLHandler />
+        <Routes>
+          <Route path="/reset-password" element={<PasswordReset />} />
+          <Route path="/book-consultation" element={<BookConsultationPage />} />
+          <Route path="/build-agent" element={<BuildAgentPage />} />
+          <Route path="/quantum-research-lab" element={<QuantumResearchLabPage />} />
+          <Route path="/quantum-collaboration" element={<QuantumCollaborationPage />} />
+          <Route path="/chat-analytics" element={<ChatAnalytics />} />
+          <Route path="/*" element={
+            <>
+              <Navbar onLoginClick={handleLoginClick} />
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/portfolio" element={<PortfolioPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+                <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+                <Route path="/cookie-policy" element={<CookiePolicyPage />} />
+              </Routes>
+              <Footer />
+
+              {/* Auto Login Popup */}
+              <AutoLoginPopup
+                isVisible={showPopup}
+                onClose={closePopup}
+                onLoginClick={handleLoginClick}
+              />
+
+              {/* Manual Login Modal */}
+              <LoginModal
+                isOpen={isLoginModalOpen}
+                onClose={() => setIsLoginModalOpen(false)}
+              />
+
+              {/* AI ChatBot */}
+              <ChatBot />
+            </>
+          } />
+        </Routes>
+      </div>
     </div>
   );
 }
