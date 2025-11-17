@@ -6,7 +6,7 @@ import { SplineScene } from './ui/spline-scene';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black pt-16">
       {/* Reduced background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -84,9 +84,9 @@ const Hero: React.FC = () => {
             {/* Stats - Minimal */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-800/30">
               {[
+                { number: '∞', label: 'Quantum Processing' },
                 { number: '99.9%', label: 'Accuracy' },
-                { number: '24/7', label: 'Active' },
-                { number: '<1s', label: 'Response' }
+                { number: '24/7', label: 'Active' }
               ].map((stat, index) => (
                 <div key={stat.label} className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-white mb-1">
